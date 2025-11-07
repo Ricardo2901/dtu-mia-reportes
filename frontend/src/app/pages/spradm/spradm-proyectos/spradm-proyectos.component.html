@@ -1,0 +1,138 @@
+<div class="mx-3">
+    <div class="container mt-5">
+        <h1>Lista de proyectos</h1>
+        <p>El superusuario puede ver el avance de los proyectos en curso y tambien los proyectos que han sido terminados.</p>
+        <p><b>Nota: </b>Va dependiendo del filtro</p>
+        <br><br>
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#agregarDatos">Agragar Archivo</button>
+    </div>
+    <br>
+    <div class="container">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Fecha de Creación</th>
+                    <th>Fecha de Actualización</th>
+                    <th>ID de Proyecto</th>
+                    <th class="text-center">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of proyecto; let i = index">
+                    <td>{{ p.proyecto_name}}</td>
+                    <td>{{ p.created_at ? (p.created_at | date:'dd/MM/yyyy HH:mm') : 'Sin datos' }}</td>
+                    <td>{{ p.updated_at ? (p.updated_at | date:'dd/MM/yyyy HH:mm') : 'Sin datos' }}</td>
+                    <td class="text-center"><b>{{ p.clave_proyecto }}</b></td>
+                    <td class="text-center">
+                            <button type="button" class="btn btn-info" data-bs-toggle="modal" (click)="verProyecto(p.id)">Ver</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+         <!-- Modal para ver los datos -->
+        <div class="modal fade" id="verDatos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Acerca del Proyecto</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <label fsor="inputPassword5" class="form-label">Nombre del Proyecto</label>
+                        <input name="username" class="form-control" value="" type="text" placeholder="Usuario" aria-label="default input example" disabled>
+                        <br>
+                        <label for="inputPassword5" class="form-label">Capitulos Completados</label>
+                        <input name="name" class="form-control" value="" type="text" placeholder="Nombre" aria-label="default input example" disabled>
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <a type="button" href="/mayma/auth/adm/users" class="btn btn-success btn-azul">Ver Más...</a>
+                        <button type="button" class="btn btn-primary">Descargar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal para editar los datos -->
+        <div class="modal fade" id="editarDatos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <form action="" method="post">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Acerca del usuario</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <label fsor="inputPassword5" class="form-label">Usuario</label>
+                            <input name="username" class="form-control" value="" type="text" placeholder="Usuario" aria-label="default input example" disabled>
+                            <label for="inputPassword5" class="form-label">Nombre</label>
+                            <input name="name" class="form-control" value="" type="text" placeholder="Nombre" aria-label="default input example">
+                            <label for="inputPassword5" class="form-label">Correo</label>
+                            <input name="password" class="form-control" value="" type="text" placeholder="Email" aria-label="default input example">
+                            <label for="inputPassword5" class="form-label">Contraseña</label>
+                            <input name="email" class="form-control" value="password" type="text" placeholder="Nueva contraseña" aria-label="default input example">
+                            <label for="inputPassword5" class="form-label">Rol</label>
+                            <input name="rol" class="form-control" value="Administrador" type="text" aria-label="default input example" disabled>
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-primary">Actualizar Datos</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- Modal para eliminar los datos -->
+        <div class="modal fade" id="eliminarUsuario" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <form action="" method="post">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Advertencia!!!</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Esta seguro de eliminar estos datos. Una vez realizado, ya no se podran restablecer.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-danger btn-azul" data-bs-toggle="modal" data-bs-target="#eliminarUsuario">Eliminar Datos</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>       
+        <!-- Modal para agreagar los datos -->
+        <div class="modal fade" id="agregarDatos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <form action="" method="post">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Crear un Nuevo Proyecto</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <label fsor="inputPassword5" class="form-label">Tipo de Proyecto</label>
+                            <input name="username" class="form-control" value="" type="text" placeholder="Usuario" aria-label="default input example">
+                            <label for="inputPassword5" class="form-label">Estacion</label>
+                            <input name="name" class="form-control" value="" type="text" placeholder="Ej. 5150" aria-label="default input example">
+                            <label for="inputPassword5" class="form-label">Microcuenca</label>
+                            <input name="password" class="form-control" value="" type="text" placeholder="Numero o nombre de microcuenca" aria-label="default input example">
+                            <label for="inputPassword5" class="form-label">Nombre del Proyecto</label>
+                            <input name="email" class="form-control" type="text" placeholder="Ej. Extraccion de Material Petreo Banco Patitos" aria-label="default input example">
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-success">Agregar Usuario</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

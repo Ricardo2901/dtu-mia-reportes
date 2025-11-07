@@ -1,0 +1,143 @@
+<div class="mx-3">
+    <div class="container mt-5">
+        <h1>Archivos Privados</h1>
+        <p><b>Maximo de archivos: </b>15 archivos.</p>
+        <br><br>
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#agregarDatos">Agragar Archivo</button>
+    </div>
+    <br>
+    <div class="container">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Formato</th>
+                    <th>Tamaño</th>
+                    <th>Fecha de Subida</th>
+                    <th class="text-center">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Usuario 1</td>
+                    <td>Nombre 1</td>
+                    <td>user1(a)email.com</td>
+                    <td>2023-10-01</td>
+                    <td class="text-center">
+                            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#verDatos">Ver</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+         <!-- Modal para ver los datos -->
+        <div class="modal fade" id="verDatos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <form action="" method="post">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Acerca del Archivo</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <label fsor="inputPassword5" class="form-label">Nombre del archivo</label>
+                            <input name="username" class="form-control" value="" type="text" placeholder="Usuario" aria-label="default input example" disabled>
+                            <label for="inputPassword5" class="form-label">Formato</label>
+                            <input name="name" class="form-control" value="" type="text" placeholder="Nombre" aria-label="default input example" disabled>
+                            <label for="inputPassword5" class="form-label">Tamaño</label>
+                            <input name="password" class="form-control" value="" type="text" placeholder="Email" aria-label="default input example" disabled>
+                            <label for="inputPassword5" class="form-label">Fecha de Subida</label>
+                            <input name="email" class="form-control" value="" type="text" placeholder="Rol" aria-label="default input example" disabled>
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-danger btn-azul" data-bs-toggle="modal" data-bs-target="#eliminarUsuario">Eliminar</button>
+                            <button type="button" class="btn btn-primary">Descargar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- Modal para editar los datos -->
+        <div class="modal fade" id="editarDatos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <form action="" method="post">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Acerca del usuario</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <label fsor="inputPassword5" class="form-label">Usuario</label>
+                            <input name="username" class="form-control" value="" type="text" placeholder="Usuario" aria-label="default input example" disabled>
+                            <label for="inputPassword5" class="form-label">Nombre</label>
+                            <input name="name" class="form-control" value="" type="text" placeholder="Nombre" aria-label="default input example">
+                            <label for="inputPassword5" class="form-label">Correo</label>
+                            <input name="password" class="form-control" value="" type="text" placeholder="Email" aria-label="default input example">
+                            <label for="inputPassword5" class="form-label">Contraseña</label>
+                            <input name="email" class="form-control" value="password" type="text" placeholder="Nueva contraseña" aria-label="default input example">
+                            <label for="inputPassword5" class="form-label">Rol</label>
+                            <input name="rol" class="form-control" value="Administrador" type="text" aria-label="default input example" disabled>
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-primary">Actualizar Datos</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- Modal para eliminar los datos -->
+        <div class="modal fade" id="eliminarUsuario" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <form action="" method="post">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Advertencia!!!</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Esta seguro de eliminar estos datos. Una vez realizado, ya no se podran restablecer.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-danger btn-azul" data-bs-toggle="modal" data-bs-target="#eliminarUsuario">Eliminar Datos</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+                </div>       
+        <!-- Modal para agreagar los datos -->
+        <div class="modal fade" id="agregarDatos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <form action="" method="post">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Agregar Usuario</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <label fsor="inputPassword5" class="form-label">Usuario</label>
+                            <input name="username" class="form-control" value="" type="text" placeholder="Usuario" aria-label="default input example">
+                            <label for="inputPassword5" class="form-label">Nombre</label>
+                            <input name="name" class="form-control" value="" type="text" placeholder="Nombre" aria-label="default input example">
+                            <label for="inputPassword5" class="form-label">Correo</label>
+                            <input name="password" class="form-control" value="" type="text" placeholder="Email" aria-label="default input example">
+                            <label for="inputPassword5" class="form-label">Contraseña</label>
+                            <input name="email" class="form-control" value="password" type="text" placeholder="Nueva contraseña" aria-label="default input example" disabled>
+                            <label for="inputPassword5" class="form-label">Rol</label>
+                            <input name="rol" class="form-control" value="Administrador" type="text" aria-label="default input example" disabled>
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-success">Agregar Usuario</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

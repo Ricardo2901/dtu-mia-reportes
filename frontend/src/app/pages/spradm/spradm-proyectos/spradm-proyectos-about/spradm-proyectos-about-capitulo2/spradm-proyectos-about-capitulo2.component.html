@@ -1,0 +1,298 @@
+<h4>Capitulo 2: Usos que se pretender dar al terreno</h4><br>
+<div [ngSwitch]="proyecto?.tipo?.toUpperCase()">
+    <div class="accordion accordion-flush" id="accordionFlushExample" *ngSwitchCase="'EXTRACCION DE MATERIAL PETREO'">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                Descripcion del Capitulo
+            </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    En este capitulo se describe de manera general el destino proyectado del terreno, especificando las actividades, instalaciones o aprovechamientos que se planean desarrollar. El objetivo es dejar claro el propósito principal del predio y la forma en que se integrará con el entorno natural y social.<br>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                Capitulo 2: Usos que se pretenden dar al terreno
+            </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <b>Información General del Capitulo 2</b><br>
+                    <div class="mb-3 row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Nombre del Proyecto:</label>
+                        <div class="col-sm-10">
+                            <input type="text" readonly class="form-control-plaintext" [value]="proyecto?.proyecto_name">
+                        </div>
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Ubicacion:</label>
+
+                        <div class="col-sm-10">
+                            <input type="text" readonly class="form-control-plaintext" [value]="'Municipio y Entidad Federativa'">
+                        </div>
+
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Vegetación:</label>
+                        <div class="col-sm-10">
+                            <input type="text" readonly class="form-control-plaintext" [value]="'Vegetación'">
+                        </div>
+
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Superficie (ha):</label>
+                        <div class="col-sm-10">
+                            <input type="text" readonly class="form-control-plaintext" [value]="'Superficie'">
+                        </div>
+                    </div>
+                    
+                    <br><b>Actividades:</b><br>
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <p class="card-title">1. Preparación del Sitio</p>
+                                    <ul class="card-text">
+                                        <li>Delimitación</li>
+                                        <li>Rescate de Flora y Fauna</li>
+                                        <li>Desmonte</li>
+                                        <li>Despalme</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <p class="card-title">2. Construcción</p>
+                                    <ul class="card-text">
+                                        <li>Construcción de Camino</li>
+                                        <li>Rampas de Acceso</li>
+                                        <li>Construcción de Bancos de Extracción</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <p class="card-title">3. Operación</p>
+                                    <ul class="card-text">
+                                        <li>Barrenadora y voladura</li>
+                                        <li>Extractor de Material</li>
+                                        <li>Carga y Acarreo</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <p class="card-title">4. Abandono de Sitio</p>
+                                    <ul class="card-text">
+                                        <li>Cierre de todas las instalaciones</li>
+                                        <li>Reforestación y Restauración</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br><div class="text-end"> 
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal">Ver Texto</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                Capitulo 2.1: Objetivos del Proyecto
+            </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div class="mb-3 row">
+                        <b>2.1. Objetivos del Proyecto:</b><br>
+                        <p>Establecer las condiciones ideales para la <b>Preparación, Construcción y Operación</b> de un Banco para extraer Material Pétreo,</p><br><br>
+                        <b>2.1.1. Objetivos Especificos:</b><br>
+                        <div class="mx-2">
+                            <ul>
+                                <li>Elaborar El Documento Técnico Unificado para el Cambio de Uso de Suelo para extraer material pétreo</li>
+                                <li>Establecer las condiciones ideales para el aprovechamiento de material pétreo en las etapas de preparación del sitio, construcción, operación y abandono del sitio.</li>
+                                <li>Realizar el cambio de uso de suelo de terrenos forestales a uso minero (Extracción de material pétreo)</li>
+                            </ul>
+                        </div><br>
+                        <b>2.1.2. Antecedentes del Proyecto:</b>
+                        <textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseOne">
+                Capitulo 2.2: Naturaleza del Proyecto
+            </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse row g-3" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <b>Naturaleza del Proyecto</b><br><br>
+                    <div class="mb-3 row">
+                        <p style="text-align: justify;">El área en estudio se encuentra ubicada en el Ejido Higueras del municipio de Ramos Arizpe,  misma que ostenta vegetación de Matorral Desértico Rosetófilo 
+                            la cual se clasifica  como Uso Forestal, de ahí la necesidad de realizar el cambio de uso de suelo, misma que será para realizar el aprovechamiento de 
+                            material pétreo, para la cual será necesario establecer la condiciones necesaria para su operación, para el establecimiento del nuevo uso, se pretende realizar 
+                            las actividades, solamente dentro del área autorizada, la cual se clasifica en Cuatro  etapas, <b>1.- Preparación del Sitio.-</b> el cual consta de la delimitación del área, 
+                            el rescate de flora y fauna, remoción total de la vegetación y despalme, <b>2.- Construcción.-</b>  banco de extracción y rampas <b>3.- Operación.-</b> extracción del material pétreo, 
+                            trituración, carga y transporte del material, 4.- Abandono del sitio.- En cuanto al abandono del sitio esta consistirá en la clausura del área, estabilización de los taludes y 
+                            actividades de restauración este en apego al concepto de pago por compensación ambiental, cualquiera que sea el tipo de actividades siempre es causante de impactos, 
+                            los factores se pueden poner en riesgo con la implementación del proyecto son principalmente al recurso suelo (propiedades físicas y Erodabilidad), con la ruptura 
+                            del suelo, vegetación (flora y fauna), topografía (relieve), paisaje (armonía y calidad) y por supuesto el recurso agua (hidrología superficial y subterránea), así 
+                            como los componentes de la atmósfera (calidad del aire y ruido), estos factores se verán afectados en un extensión de 3.99 ha. Dentro del área de Cambio de uso de 
+                            suelo no se encuentran cuerpos de agua permanentes que pueda causar desequilibrio en este componente, solamente se manifiestan escurrimientos de tipo superficial en 
+                            temporadas de lluvia, el cual para no afectar la recarga de los mantos freáticos. De acuerdo a los criterios de regulación aplicables al proyecto se tiene lo siguiente: 
+                            <b> Programa de Ordenamiento Ecológico General del Territorio Federal</b>, el presente proyecto realiza acciones de conservación y protección a los ecosistemas y la 
+                            biodiversidad, así como   recuperación de especies en riesgo, mediante la ejecución de un programa de rescate de flora y fauna. <b>Programa de Ordenamiento Ecológico 
+                            General del Territorio del Estado de Coahuila</b>, se tiene lo siguiente: se promueve la conservación de la comunidades vegetales y faunísticas así como el manejo de 
+                            hábitats, la recuperación de especies que estén en peligro de extinción o amenazadas, con la implementación de un programa de rescate de flora y fauna, se permitirá 
+                            la continuidad con los predios aledaños al dejar sin aprovechamiento áreas del mismo predio, se disminuirá el riesgo de incendio al actuar la periferia como brecha 
+                            cortafuego, también se realizaran acciones de conservación esto en apego al pago por compensación ambiental, para el <b>Programa De Ordenamiento Ecológico De La Región
+                             Cuenca De Burgos</b>, se tiene lo siguiente: para las acciones de conservación y restauración será en apego al pago por compensación ambiental, para la conservación de la 
+                             cubierta vegetal se realizara rescate de flora silvestre, se podrá utilizara aguas tratadas para mitigar impactos por emisiones de polvos, se tendrá registro de la 
+                             generación y descargas de residuos de cualquier tipo, no se modificaran cuerpos de agua de ningún tipo, se realizan platicas de educación ambiental a los trabajadores 
+                             involucrados en cada una de las etapas del proyecto.</p><br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseTwo">
+                Capitulo 2.3: Justificación por qué los terrenos son apropiados al nuevo uso
+            </button>
+            </h2>
+            <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div class="mb-3 row">
+                        <p style="text-align: justify;">Los terrenos en donde se pretende establecer el proyecto para la extracción de material pétreo, se encuentran ubicado en el municipio de Ramos Arizpe, Coahuila, en el Ejido Higueras, Para llegar al área en estudio,..</p><br>
+                        <textarea class="form-control" name="" id="" cols="30" rows="10" placeholder="Describir a donde llegar al area de estudio"></textarea><br>
+                        <p style="text-align: justify;">... donde se encuentra el área de estudio, al encontrase fuera de las manchas urbanas, se considera adecuado para el nuevo uso de suelo que es la 
+                            extracción de material pétreo, además el uso actual del predio se encuentra sin uso y se aplicara un programa de rescate y reubicación de flora y fauna principalmente aquellas 
+                            que se encuentren dentro de la NOM-059 SEMARNAT-2010, así como aquellas de lento desplazamiento y crecimiento, en cuanto a la vegetación que presenta es del tipo Matorral 
+                            Desértico Rosetófilo ocupando una superficie de 3.99 ha la que representa el 100 %,se encuentra en vegetación primaria en condiciones regulares al ser eliminada no presenta 
+                            disminución biológica dentro del sistema ambiental que se encuentran representadas las especies, además  en donde se pretende establecer el nuevo proyecto de acuerdo a las 
+                            características generales del área no afecta a cuerpos de agua importantes como perennes solo se presentan escurrimientos en época de lluvias al encontrase el área en una 
+                            ladera, el cual no tendrá ningún impacto o que afecte a las corrientes subterráneas, que requieran acciones especiales o que afecten la hidrología del sistema ambiental.</p>
+
+                        <p style="text-align: justify;">En conclusión, el implementar el proyecto de {{ proyecto?.tipo?.toLocaleLowerCase() }}, no pone en riesgo la pérdida de Biodiversidad al tener dentro del sistema ambiental la presencia
+                             de las especies que serán sujetas a eliminación, se mantendrá la biodiversidad biológica al efectuarse un programa de rescate de flora y fauna silvestre. no se disminuirá 
+                             la calidad ni cantidad de agua, ni se modificarán cuerpos de agua, Además, durante todos los procesos del proyecto en las emisiones de polvo a la atmósfera, se reducirá con 
+                             la humectación del suelo utilizando aguas recicladas, así como reducción de smog a la atmosfera, con la aplicación de mantenimientos preventivos a las maquinarias de acuerdo 
+                             a la NOM-045-SEMARNAT-2006, se realizarán actividades de restauración esto en apego al concepto del pago por compensación ambiental.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseThree">
+                Capitulo 2.4: Programa de Trabajo
+            </button>
+            </h2>
+            <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div class="mb-3 row">
+                        <b>2.4. Programa de Trabajo</b><br>
+                        <p style="text-align: justify;">Para la ejecución en donde se requiere la ampliación de más área para extraer material pétreo, implica la remoción total de vegetación forestal, para ellos se requieren objetivos 
+                            bien definidos y planeados para no poner en riesgo los factores ambientales que dan sustento a su entorno, se contempla en primer lugar la visita preliminar para analizar la 
+                            posibilidad o si es factible realizar el cambio de uso del suelo en el predio en mención posteriormente se lleva a cabo el estudio completo a través del cual se evaluará cada 
+                            proceso con base a la normatividad establecida y mediante el cual se dará sustento para determinar su autorización o negación de la ejecución siguiendo el orden que se enlista, 
+                            previo a la ejecución del cambio de uso de suelo se realizará lo siguiente:</p><br>
+                        <div class="mx-2">
+                            <ul style="text-align: justify;">
+                                <li>Elaboración del plano topográfico del área sujeto de estudio para la estimación del volumen de extracción.</li>
+                                <li>Delimitación del predio y área sujeta de estudio.</li>
+                                <li>Estudio de campo (sitios de muestreo, registro de vegetación por estrato, transectos para aplicación de métodos de muestreo de Fauna, toma de fotografías de condición actual y características generales de los medios físicos y biológicos tanto del predio en general como en forma específica del área sujeta a cambio de uso de suelo).</li>
+                                <li>Elaboración de documento en base a información de campo y revisión bibliográfica.</li>
+                                <li>Revisión y análisis de estudio para autorización del cambio de uso de suelo.</li>
+                            </ul>
+                        </div>
+                        <div class="row row-cols-1 row-cols-md-2 g-4">
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <p class="card-title"><b>2.4.1. Preparación del Sitio</b></p>
+                                        <ul class="card-text">
+                                            <li>Delimitación</li>
+                                            <li>Rescate de Flora y Fauna</li>
+                                            <li>Desmonte</li>
+                                            <li>Despalme</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <p class="card-title"><b>2.4.2. Construcción</b></p>
+                                        <ul class="card-text">
+                                            <li>Construcción de Camino</li>
+                                            <li>Rampas de Acceso</li>
+                                            <li>Construcción de Bancos de Extracción</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <p class="card-title"><b>2.4.3. Operación</b></p>
+                                        <ul class="card-text">
+                                            <li>Barrenadora y voladura</li>
+                                            <li>Extractor de Material</li>
+                                            <li>Carga y Acarreo</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <p class="card-title"><b>2.4.4. Abandono de Sitio</b></p>
+                                        <ul class="card-text">
+                                            <li>Cierre de todas las instalaciones</li>
+                                            <li>Reforestación y Restauración</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <b><br>2.4.5. Calendario de ejecución del proyecto</b>
+                        <label for="staticEmail" class="col-sm-2 col-form-label">1. Preparación:</label>
+                        <div class="col-sm-10">
+                            <input type="text" readonly class="form-control-plaintext" [value]="">
+                        </div>
+                        <label for="staticEmail" class="col-sm-2 col-form-label">2. Construcción:</label>
+                        <div class="col-sm-10">
+                            <input type="text" readonly class="form-control-plaintext" [value]="">
+                        </div>
+                        <label for="staticEmail" class="col-sm-2 col-form-label">3. Operación:</label>
+                        <div class="col-sm-10">
+                            <input type="text" readonly class="form-control-plaintext" [value]="">
+                        </div>
+                        <label for="staticEmail" class="col-sm-2 col-form-label">4. Abandono del área:</label>
+                        <div class="col-sm-10">
+                            <input type="text" readonly class="form-control-plaintext" [value]="'1 año'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="text-end">
+            <button type="button" class="btn" data-bs-toggle="modal" style="background-color: #FF1F48;">Guardar Cambios</button> | 
+            <button type="button" class="btn" data-bs-toggle="modal" style="background-color: #FFD61F;">Ver Cambios</button> | 
+            <button type="button" class="btn" data-bs-toggle="modal" style="background-color: #1FFFD6;">Ver Texto</button> | 
+            <button type="button" class="btn" data-bs-toggle="modal" style="background-color: #1F48FF;">Descargar Archivo</button>
+        </div>
+    </div>
+</div>
+<br><br>

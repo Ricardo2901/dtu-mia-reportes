@@ -1,0 +1,389 @@
+<h4>Detalles del Proyecto</h4><br>
+<div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            Acerca del proyecto
+        </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                Nombre del Proyecto: {{ proyecto?.proyecto_name }}<br>
+                Clave del Proyecto: {{ proyecto?.clave_proyecto }}<br>
+                Tipo de Proyecto: {{ proyecto?.tipo }}<br>
+                Fecha de Inicio: {{ proyecto?.created_at ? (proyecto?.created_at | date:"dd/MM/yyyy 'a las' HH:mm") : "Sin Datos" }}<br>
+                Fecha de Modificacion: {{ proyecto?.updated_at ? (proyecto?.updated_at | date:"dd/MM/yyyy 'a las' HH:mm") : "Sin Datos" }}<br>
+                Ultima Modificacion por: Admin (15/09/2025 a las 15:00 hrs.)<br>
+                Estado: En Proceso<br>
+                <br><br>
+                <div class="text-end">
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal">Actualizar Datos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            Capitulo 1: Datos generales del proyecto y del promovente
+        </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                En este capítulo se recopilan y presentan los datos principales del proyecto, incluyendo su nombre, ubicación y características generales. Además, se registran los datos del promovente o responsable, como su nombre, información de contacto y rol dentro del proyecto. Esta información inicial permite identificar claramente el proyecto y su titular, sirviendo como base para los capítulos posteriores.<br>
+                <br>
+                Fecha de Inicio: 15/09/2025<br>
+                Fecha de Modificacion: <br>
+                Ultima Modificacion por: <br>
+                <br>
+                <div class="text-end">
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" (click)="verCapitulo1()">Modificar</button> | 
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal">Ver Cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            Capitulo 2: Usos que se pretender dar al terreno
+        </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                En este apartado se describe de manera general el destino proyectado del terreno, especificando las actividades, instalaciones o aprovechamientos que se planean desarrollar. El objetivo es dejar claro el propósito principal del predio y la forma en que se integrará con el entorno natural y social.<br>
+                <br>
+                Fecha de Inicio: 15/09/2025<br>
+                Fecha de Modificacion: <br>
+                Ultima Modificacion por: <br>
+                <br>
+                <div class="text-end">
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" (click)="verCapitulo2()">Modificar</button> | 
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal">Ver Cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseOne">
+            Capitulo 3: Ubicacion y Superficie del Predio o Conjunto de Predios y Delimitación de la Porción de Donde se Pretende
+            Realizar el Cambio de Uso de Suelo a Través de Planos Georreferenciados.
+        </button>
+        </h2>
+        <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                En este capítulo se presenta la ubicación geográfica exacta del predio o conjunto de predios donde se desarrollará el proyecto, describiendo sus coordenadas, extensión total y límites territoriales. A través de planos georreferenciados se delimita la zona específica sujeta al cambio de uso de suelo, incluyendo mapas de referencia que muestran la relación del predio con su entorno natural y urbano. Asimismo, se detallan las colindancias, los accesos principales y las vías de comunicación cercanas, con el objetivo de proporcionar una representación espacial clara y precisa del área de estudio. Estos elementos cartográficos permiten evaluar la viabilidad ambiental y territorial del proyecto, asegurando que la información geográfica cumpla con los estándares técnicos requeridos.<br>
+                <br>
+                Fecha de Inicio: 15/09/2025<br>
+                Fecha de Modificacion: <br>
+                Ultima Modificacion por: <br>
+                <br>
+                <div class="text-end">
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" (click)="verCapitulo3()">Modificar</button> | 
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal">Ver Cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseTwo">
+            Capitulo 4 (Pendiente)
+        </button>
+        </h2>
+        <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                Descripcion del Capitulo<br>
+                <br>
+                Fecha de Inicio: 15/09/2025<br>
+                Fecha de Modificacion: <br>
+                Ultima Modificacion por: <br>
+                <br>
+                <div class="text-end">
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal">Modificar</button> | 
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal">Ver Cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseThree">
+            Capitulo 5 (Pendiente)
+        </button>
+        </h2>
+        <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                Descripcion del Capitulo<br>
+                <br>
+                Fecha de Inicio: 15/09/2025<br>
+                Fecha de Modificacion: <br>
+                Ultima Modificacion por: <br>
+                <br>
+                <div class="text-end">
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal">Modificar</button> | 
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal">Ver Cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseOne">
+            Capitulo 6: Análisis comparativo de la composición florística y faunística del área sujeta a Cambio de uso de suelo en Terrenos Forestales con relación a los tipos de vegetación del ecosistema de la cuenca, subcuenca o microcuenca hidrográfica, que permita determinar el grado de afectación por el Cambio de Uso de Suelo en Terrenos forestales.
+        </button>
+        </h2>
+        <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                <p style="text-align: justify;">En este capítulo se realiza un análisis detallado de la composición florística y faunística del área donde se propone el cambio de uso de suelo en terrenos forestales. Se comparan las especies vegetales y animales presentes en el sitio con aquellas que caracterizan los ecosistemas de la cuenca, subcuenca o microcuenca hidrográfica correspondiente. Este análisis permite identificar las similitudes, diferencias y posibles alteraciones ecológicas que podrían generarse por la modificación del uso del suelo. Asimismo, se evalúa el grado de afectación sobre la biodiversidad y el equilibrio ecológico, proporcionando una base técnica para estimar los impactos ambientales y definir medidas de mitigación adecuadas.</p><br>
+                <br>
+                Fecha de Inicio: 15/09/2025<br>
+                Fecha de Modificacion: <br>
+                Ultima Modificacion por: <br>
+                <br>
+                <div class="text-end">
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" (click)="verCapitulo6()">Modificar</button> | 
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal">Ver Cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseTwo">
+            Capitulo 7: Analisis comparativo de las tasas de erosion de los suelos, asi como la calidad, captacion e infiltracion del agua en el area
+            solicitada respecto a las que se tendrian despues de la remocion de la vegetacion forestal
+        </button>
+        </h2>
+        <div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                Descripcion del Capitulo<br>
+                <br>
+                Fecha de Inicio: 15/09/2025<br>
+                Fecha de Modificacion: <br>
+                Ultima Modificacion por: <br>
+                <br>
+                <div class="text-end">
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" (click)="verCapitulo7()">Modificar</button> | 
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal">Ver Cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseThree">
+            Capitulo 8: Estimacion de volumen en metros cubicos por especie y por predio, de las materias primas forestales derivadas del
+            cambio de uso de suelo
+        </button>
+        </h2>
+        <div id="flush-collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                Descripcion del Capitulo<br>
+                <br>
+                Fecha de Inicio: 15/09/2025<br>
+                Fecha de Modificacion: <br>
+                Ultima Modificacion por: <br>
+                <br>
+                <div class="text-end">
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" (click)="verCapitulo8()">Modificar</button> | 
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal">Ver Cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseOne">
+            Capitulo 9: Plazo y forma de ejecucion del cambio de uso de suelo
+        </button>
+        </h2>
+        <div id="flush-collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                Descripcion del Capitulo<br>
+                <br>
+                Fecha de Inicio: 15/09/2025<br>
+                Fecha de Modificacion: <br>
+                Ultima Modificacion por: <br>
+                <br>
+                <div class="text-end">
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" (click)="verCapitulo9()">Modificar</button> | 
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal">Ver Cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseTwo">
+            Capitulo 10: Propuesta de programa de rescate y reubicacion de especies de flora y fauna que pudieran resultar afectadas y su adaptacion al nuevo habitat, en caso de autorizarse el cambio de uso de suelo
+        </button>
+        </h2>
+        <div id="flush-collapseEleven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                Descripcion del Capitulo<br>
+                <br>
+                Fecha de Inicio: 15/09/2025<br>
+                Fecha de Modificacion: <br>
+                Ultima Modificacion por: <br>
+                <br>
+                <div class="text-end">
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" (click)="verCapitulo10()">Modificar</button> | 
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal">Ver Cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseThree">
+            Capitulo 11: Identifición, Descripcion y Evaluacion de los impactos ambientales
+        </button>
+        </h2>
+        <div id="flush-collapseTwelve" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                Descripcion del Capitulo<br>
+                <br>
+                Fecha de Inicio: 15/09/2025<br>
+                Fecha de Modificacion: <br>
+                Ultima Modificacion por: <br>
+                <br>
+                <div class="text-end">
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" (click)="verCapitulo11()">Modificar</button> | 
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal">Ver Cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThirteen" aria-expanded="false" aria-controls="flush-collapseOne">
+            Capitulo 12: Medidas de prevencion y mitigacion de impactos sobre los recursos forestales, la flora y fauna silvestre,
+            aplicables durante las distintas etapas del Desarrollo del cambio de uso de suelo
+        </button>
+        </h2>
+        <div id="flush-collapseThirteen" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                Descripcion del Capitulo<br>
+                <br>
+                Fecha de Inicio: 15/09/2025<br>
+                Fecha de Modificacion: <br>
+                Ultima Modificacion por: <br>
+                <br>
+                <div class="text-end">
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" (click)="verCapitulo12()">Modificar</button> | 
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal">Ver Cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFourteen" aria-expanded="false" aria-controls="flush-collapseTwo">
+            Capitulo 13: Servicios ambientales que seran afectados por el cambio de uso de suelo propuesto
+        </button>
+        </h2>
+        <div id="flush-collapseFourteen" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                Descripcion del Capitulo<br>
+                <br>
+                Fecha de Inicio: 15/09/2025<br>
+                Fecha de Modificacion: <br>
+                Ultima Modificacion por: <br>
+                <br>
+                <div class="text-end">
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" (click)="verCapitulo13()">Modificar</button> | 
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal">Ver Cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFifteen" aria-expanded="false" aria-controls="flush-collapseThree">
+            Capitulo 14: Analisis que demuestre la biodiversidad de los ecosistemas que se veran afectados por el cambio de uso de suelo se mantenga
+        </button>
+        </h2>
+        <div id="flush-collapseFifteen" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                Descripcion del Capitulo<br>
+                <br>
+                Fecha de Inicio: 15/09/2025<br>
+                Fecha de Modificacion: <br>
+                Ultima Modificacion por: <br>
+                <br>
+                <div class="text-end">
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" (click)="verCapitulo14()">Modificar</button> | 
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal">Ver Cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSixteen" aria-expanded="false" aria-controls="flush-collapseOne">
+            Capitulo 15: Datos de inscripcion en el registro del prestador de Servicios forestales que haya elaborado el estudio y, del que estara a cargo
+            de la ejecucion del cambio de uso de suelo
+        </button>
+        </h2>
+        <div id="flush-collapseSixteen" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                Descripcion del Capitulo<br>
+                <br>
+                Fecha de Inicio: 15/09/2025<br>
+                Fecha de Modificacion: <br>
+                Ultima Modificacion por: <br>
+                <br>
+                <div class="text-end">
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" (click)="verCapitulo15()">Modificar</button> | 
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal">Ver Cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeventeen" aria-expanded="false" aria-controls="flush-collapseTwo">
+            Capitulo 16
+        </button>
+        </h2>
+        <div id="flush-collapseSeventeen" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <<div class="accordion-body">
+                Descripcion del Capitulo<br>
+                <br>
+                Fecha de Inicio: 15/09/2025<br>
+                Fecha de Modificacion: <br>
+                Ultima Modificacion por: <br>
+                <br>
+                <div class="text-end">
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" (click)="verCapitulo16()">Modificar</button> | 
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal">Ver Cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEighteen" aria-expanded="false" aria-controls="flush-collapseThree">
+            Capitulo 17: Identifición de los instrumentos metodologicos y elementos tecnicos que sustentan la informacion señalada
+            en las fracciones anteriores
+        </button>
+        </h2>
+        <div id="flush-collapseEighteen" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                Descripcion del Capitulo<br>
+                <br>
+                Fecha de Inicio: 15/09/2025<br>
+                Fecha de Modificacion: <br>
+                Ultima Modificacion por: <br>
+                <br>
+                <div class="text-end">
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" (click)="verCapitulo17()">Modificar</button> | 
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal">Ver Cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>

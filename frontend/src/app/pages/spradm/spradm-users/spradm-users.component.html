@@ -1,0 +1,165 @@
+<div class="mx-3">
+    <div class="container mt-5">
+        <h1>Lista de Usuarios</h1>
+        <p>El administrador tiene el control de los usuarios que estan en este sistema</p>
+        <br><br>
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#agregarDatos">Agragar Usuario</button>
+    </div>
+    <br>
+    <div class="container">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Usuario</th>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Última vez</th>
+                    <th class="text-center">Acciones</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let users of usuarios; let i = index">
+                <tr>
+                    <td>{{ users.username }}</td>
+                    <td>{{ users.name }}</td>
+                    <td>{{ users.email }}</td>
+                    <td>{{ users.last_login }}</td>
+                    <td class="text-center">
+                            <button type="button" class="btn btn-info" data-bs-toggle="modal" [attr.data-bs-target]="'#verDatos' + i">Ver</button> | 
+                            <button type="button" class="btn btn-warning" data-bs-toggle="modal" [attr.data-bs-target]="'#editarDatos' + i" (click)="abrirModalUpdate(users)">Editar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- 
+            ################################################################
+                Modal para ver los datos 
+            ################################################################
+        -->
+        <div *ngFor="let users of usuarios; let i = index" tabindex="-1" class="modal fade" [id]="'verDatos' + i" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <form action="" method="post">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Acerca del usuario</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <label fsor="inputPassword5" class="form-label">Usuario</label>
+                            <input name="username" class="form-control" [value]="users.username" type="text" placeholder="" aria-label="default input example" disabled>
+                            <label for="inputPassword5" class="form-label">Nombre</label>
+                            <input name="name" class="form-control" [value]="users.name" type="text" placeholder="Nombre" aria-label="default input example" disabled>
+                            <label for="inputPassword5" class="form-label">Correo</label>
+                            <input name="password" class="form-control" [value]="users.email" type="text" placeholder="Email" aria-label="default input example" disabled>
+                            <label for="inputPassword5" class="form-label">Rol</label>
+                            <input name="email" class="form-control" [value]="users.type_user" type="text" placeholder="Rol" aria-label="default input example" disabled>
+                            <label for="inputPassword5" class="form-label">Última vez</label>
+                            <input name="rol" class="form-control" [value]="users.last_login" type="text" aria-label="default input example" disabled>
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-danger btn-azul" data-bs-toggle="modal" [attr.data-bs-target]="'#eliminarDatos' + i" (click)="abrirModalDelete(users)">Eliminar Datos</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <!-- 
+            ################################################################
+                Modal para Editar los datos
+            ################################################################
+        -->
+        <div *ngFor="let users of usuarios; let i = index" tabindex="-1" [id]="'editarDatos' + i" class="modal fade" id="editarDatos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <form [formGroup]="updateUserForm" (ngSubmit)="actualizarUsuario()">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar Datos</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <label for="inputPassword5" class="form-label">Usuario</label>
+                            <input formControlName="username" class="form-control" [value]="users.username" type="text" placeholder="Usuario" aria-label="default input example">
+                            <label for="inputPassword5" class="form-label">Nombre</label>
+                            <input formControlName="name" class="form-control" [value]="users.name" type="text" placeholder="Nombre" aria-label="default input example">
+                            <label for="inputPassword5" class="form-label">Correo</label>
+                            <input formControlName="email" class="form-control" [value]="users.email" type="email" placeholder="Email" aria-label="default input example">
+                            <label for="inputPassword5" class="form-label">Contraseña</label>
+                            <input formControlName="password" class="form-control" [value]="'password'" type="password" placeholder="Nueva contraseña" aria-label="default input example">
+                            <label for="inputPassword5" class="form-label">Rol</label>
+                            <input name="rol" class="form-control" [value]="users.type_user" type="text" aria-label="default input example" disabled>
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Actualizar Datos</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <!-- 
+            ################################################################
+                Modal para Eliminar los datos
+            ################################################################
+        -->
+        <div *ngFor="let users of usuarios; let i = index" tabindex="-1" [id]="'eliminarDatos' + i" class="modal fade" id="editarDatos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <form [formGroup]="updateUserForm" (ngSubmit)="eliminarUsuario()">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Eliminar Datos</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <label for="inputPassword5" class="form-label">¿Estas seguro de eliminar este usuario?</label>
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-danger" data-bs-dismiss="modal">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <!-- 
+            ################################################################
+                Modal para Agregar Usuarios
+            ################################################################
+        -->
+        <div class="modal fade" id="agregarDatos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <form [formGroup]="userForm" (ngSubmit)="agregarUsuario()">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Agregar Usuario</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <label for="inputPassword5" class="form-label">Usuario</label>
+                            <input formControlName="username" class="form-control" value="" type="text" placeholder="Usuario" aria-label="default input example">
+                            <label for="inputPassword5" class="form-label">Nombre</label>
+                            <input formControlName="name" class="form-control" value="" type="text" placeholder="Nombre" aria-label="default input example">
+                            <label for="inputPassword5" class="form-label">Correo</label>
+                            <input formControlName="email" class="form-control" value="" type="email" placeholder="Email" aria-label="default input example">
+                            <label for="inputPassword5" class="form-label">Contraseña</label>
+                            <input name="email" class="form-control" value="password" type="password" placeholder="Nueva contraseña" aria-label="default input example" disabled>
+                            <label for="inputPassword5" class="form-label">Rol</label>
+                            <input name="rol" class="form-control" value="Usuario" type="text" aria-label="default input example" disabled>
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-success">Agregar Usuario</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

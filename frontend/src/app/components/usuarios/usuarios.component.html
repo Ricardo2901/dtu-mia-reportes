@@ -1,0 +1,16 @@
+<h2>Lista de Usuarios</h2>
+<table class="table table-bordered table-striped">
+    <thead>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>Nacionalidad</th>
+    </thead>
+
+    <tbody *ngFor="let u of usuarios">
+        <tr>
+            <td>{{ u.name }}</td>
+            <td>{{ u.edad }}</td>
+            <td>{{ u.nacionalidad }}</td>
+        </tr>
+    </tbody>
+</table>
